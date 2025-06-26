@@ -69,7 +69,6 @@ pub fn read_pushdata(script: &[u8]) -> &[u8] {
 pub trait Wallet {
     fn balance(&self) -> u64;
 }
-
 pub struct TestWallet {
     pub confirmed: u64,
 }
