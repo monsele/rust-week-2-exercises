@@ -1,4 +1,3 @@
-
 use hex::{decode, encode};
 
 pub fn decode_hex(hex_str: &str) -> Result<Vec<u8>, String> {
@@ -63,7 +62,7 @@ pub struct Outpoint(pub String, pub u32);
 pub fn read_pushdata(script: &[u8]) -> &[u8] {
     // TODO: Return the pushdata portion of the script slice (assumes pushdata starts at index 2)
     let value = script.get(2..).unwrap_or_default();
-    value  
+    value
 }
 
 pub trait Wallet {
